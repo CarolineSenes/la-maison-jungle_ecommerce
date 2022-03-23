@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "../styles/Footer.css";
+import "../App.css";
 
 function Footer() {
   const [inputValue, setInputValue] = useState("");
+  const [alert, setAlert] = useState(false);
 
-  function handelBlur() {
+  function handelClick() {
     if (!inputValue.includes("@")) {
-      alert(`Attention, cette saisie n'est pas une adresse valide.`);
+      setAlert(true);
     }
   }
 
@@ -16,11 +18,24 @@ function Footer() {
         Pour les passionné·e·s de plantes 🌿🌱🌵
       </div>
       <div className="lmj-footer-elem">Laissez-nous votre mail :</div>
-      <input
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        onBlur={handelBlur}
-      />
+      <div className="lmj-footer-email">
+        <input
+          className="lmj-input"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={()=>handelClick()}>Envoyer</button>
+      </div>
+
+      {alert && (
+        <div className="lmj-alert">
+          <span>Cet email n'est pas valide, il manque un @.</span>
+          <ion-icon
+            name="close-outline"
+            onClick={() => setAlert(false)}
+          ></ion-icon>
+        </div>
+      )}
     </footer>
   );
 }
