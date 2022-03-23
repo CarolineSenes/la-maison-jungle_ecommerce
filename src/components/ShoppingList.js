@@ -1,11 +1,15 @@
 import { plantList } from "../datas/plantList";
 import "../styles/ShoppingList.css";
+import "../App.css"
 import PlantItem from "../components/PlantItem";
 import Categories from "./Categories";
 import { useState } from "react";
 
 const ShoppingList = ({ cart, updateCart }) => {
   const [activeCategory, setActiveCategory] = useState("");
+  const [alert, setAlert] = useState(false);
+
+
   const categories = plantList.reduce(
     (acc, plant) =>
       acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -15,17 +19,10 @@ const ShoppingList = ({ cart, updateCart }) => {
   function addToCart(name, price) {
     //vérifie si plate est déjà présente dans le state "cart" (donc dans la liste du panier)
     const currentPlantSaved = cart.find((plant) => plant.name === name);
+
     //si la plante existe déjà, on créé un nouveau tableau sans elle
     if (currentPlantSaved) {
-      const cartFilteredCurrentPlant = cart.filter(
-        (plant) => plant.name !== name
-      );
-
-      //met à jour le state "cart" avec les données du nouveau tableau "cartFilteredCurrentPlant" et on la rajoute (sous forme d'objet) en ajoutant 1 à sa quantité
-      updateCart([
-        ...cartFilteredCurrentPlant,
-        { name, price, amount: currentPlantSaved.amount + 1 },
-      ]);
+      setAlert(true);
 
       //sinon on retourne le state "cart" existant auquel on rajoute la plante avec une quantité de 1
     } else {
@@ -35,6 +32,15 @@ const ShoppingList = ({ cart, updateCart }) => {
 
   return (
     <div className="lmj-shopping-list">
+      {alert && (
+        <div className="lmj-alert">
+          <span>La plante existe déjà dans le panier</span>
+          <ion-icon
+            name="close-outline"
+            onClick={() => setAlert(false)}
+          ></ion-icon>
+        </div>
+      )}
       <Categories
         categories={categories}
         activeCategory={activeCategory}
