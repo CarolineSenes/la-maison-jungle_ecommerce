@@ -27,7 +27,7 @@
 .lmj-cart-toggle-button {
 	background: none;
 	font-weight: 600;
-	color: white;
+	color: black;
 	align-self: flex-end;
 }
 
@@ -36,6 +36,6 @@
 	width: 300px;
 }
 
-.lmj-cart-toggle-button {
-	color: black;
+ion-icon{
+	cursor: pointer;
 }
