@@ -1,5 +1,4 @@
 .lmj-footer {
-	color: black;
 	padding: 32px;
 	border-top: solid 3px black;
 	display: flex;
@@ -11,4 +10,8 @@
 
 .lmj-footer-elem {
 	margin-bottom: 10px;
+}
+
+.lmj-footer-email{
+	margin-top: 10px;
 }

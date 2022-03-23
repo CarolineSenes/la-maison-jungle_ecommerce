@@ -8,6 +8,17 @@
 	width: 300px;
 }
 
+.lmj-cart-list{
+	padding: 0;
+}
+
+.lmj-cart-list-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+}
+
 .lmj-cart-add-button {
 	margin-left: 32px;
 	cursor: pointer;
@@ -15,12 +26,7 @@
 
 .lmj-cart-toggle-button {
 	background: none;
-	outline: none;
-	border: none;
 	font-weight: 600;
-	cursor: pointer;
-	align-self: self-start;
-	padding: 0;
 	color: white;
 	align-self: flex-end;
 }
@@ -30,6 +36,6 @@
 	width: 300px;
 }
 
-.lmj-cart-closed > button {
+.lmj-cart-toggle-button {
 	color: black;
 }
