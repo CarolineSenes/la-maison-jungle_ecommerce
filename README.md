@@ -1,20 +1,12 @@
 
 # Application e-commerce de plantes
 
+
 Développement du frontend réalisé pendant la formation "Débuter avec React" d'OpenClassrooms auquel j'ai rajouté de nouvelles features pour améliorer l'application.
 
-**Compétences développées :** listes et conditions | props | évènements | hooks (useState, useEffect)
-
-## Démo
-
 [--> Démo déployée sur Netlify](https://maison-jungle.netlify.app/)
-```bash
-  https://maison-jungle.netlify.app/
-```
 
-## Badges
-[![CodeFactor](https://www.codefactor.io/repository/github/carolinesenes/la-maison-jungle_ecommerce/badge)](https://www.codefactor.io/repository/github/carolinesenes/la-maison-jungle_ecommerce)
-
+[![CodeFactor](https://www.codefactor.io/repository/github/carolinesenes/la-maison-jungle_ecommerce/badge)](https://www.codefactor.io/repository/github/carolinesenes/https://github.com/CarolineSenes/la-maison-jungle_ecommerce)
 
 
 ## Screenshots
@@ -22,6 +14,15 @@ Développement du frontend réalisé pendant la formation "Débuter avec React" 
 ![Desktop screenshot](https://github.com/CarolineSenes/la-maison-jungle_ecommerce/blob/master/src/assets/screenshot_desktop.png)
 
 
+## Compétences acquises
+
+- créer une app en React.
+- utilisation des function component.
+- utilisation du hook useState() pour gérer le state local.
+- utilisation du hook useEffect() pour effectuer une action à un moment donné du cycle de vie de nos composants et ses différents effets.
+- utilisation des props pour réutiliser les composants en leur passants des données en paramètres.
+- Props Dilling : terme utiliser quand on passe des props à un composant uniquement pour qu’un composant enfant y ait accès.
+- gestion des évènements.
 ## Tech Stack
 
 **Client:** React, JS, HTML/CSS
@@ -48,11 +49,23 @@ Développement du frontend réalisé pendant la formation "Débuter avec React" 
 - Remplacement de la méthode alert() par un message élement HTML/CSS/JS.
 - Changement du gestionnaire d'evenement : passé du onBlur à onClick sur le nouveau boutton "Envoyer".
 - Stylisme des élements : button, select, input.
-
-
 ## Optimisations réalisées
-Le but étant de découvrir React, le responsive, l'accessibilité et la gestion du CSS avec Sass n'ont pas été intégré.
+- Responsive : mobile, tablet, desktop
+- SEO : meta title, meta descrption, favicon
+- a11y
 
+
+
+## Lancement
+Clôner le repo, puis :
+
+```bash
+# installer les dépendances
+$ npm install
+
+# lancer
+$ npm run dev
+```
 
 ## Ressources utilisées
 
