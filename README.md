@@ -49,23 +49,9 @@ Développement du frontend réalisé pendant la formation "Débuter avec React" 
 - Remplacement de la méthode alert() par un message élement HTML/CSS/JS.
 - Changement du gestionnaire d'evenement : passé du onBlur à onClick sur le nouveau boutton "Envoyer".
 - Stylisme des élements : button, select, input.
+
 ## Optimisations réalisées
-- Responsive : mobile, tablet, desktop
-- SEO : meta title, meta descrption, favicon
-- a11y
-
-
-
-## Lancement
-Clôner le repo, puis :
-
-```bash
-# installer les dépendances
-$ npm install
-
-# lancer
-$ npm run dev
-```
+Aucune. Le but étant de découvrir React.
 
 ## Ressources utilisées
 
